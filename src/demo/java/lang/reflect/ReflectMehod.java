@@ -1,4 +1,4 @@
-package demo.test.lang.reflect;
+package demo.java.lang.reflect;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -11,11 +11,11 @@ public class ReflectMehod {
 		TestClass test = new TestClass();
 		
 		
-		Method method = test.getClass().getMethod("noPara");          //得到类中所有的public属性的方法
+		Method method = test.getClass().getMethod("noPara");          //得到类中�?有的public属�?�的方法
 		System.out.println(method.invoke(test));
 		
-		method = test.getClass().getDeclaredMethod("privMethod");   //得到类中所有的方法，包括private,protected,public属性的方法
-		method.setAccessible(true);                    //调用private属性的方法，必须设置
+		method = test.getClass().getDeclaredMethod("privMethod");   //得到类中�?有的方法，包括private,protected,public属�?�的方法
+		method.setAccessible(true);                    //调用private属�?�的方法，必须设�?
 		System.out.println(method.invoke(test));
 		
 		method = TestClass.class.getMethod("onePara", int.class);

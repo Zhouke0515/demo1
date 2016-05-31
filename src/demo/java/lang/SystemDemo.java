@@ -1,4 +1,4 @@
-package demo.test.lang;
+package demo.java.lang;
 
 public class SystemDemo {
 

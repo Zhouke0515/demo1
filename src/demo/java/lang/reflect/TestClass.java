@@ -1,4 +1,4 @@
-package demo.test.lang.reflect;
+package demo.java.lang.reflect;
 
 public class TestClass {
 
