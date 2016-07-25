@@ -8,23 +8,23 @@ import java.util.Date;
 public class StringDemo {
 
 	public static void main(String[] args) {
-		String str;
-		System.out.println(String.format("鍗佽繘鍒讹細%d", 100));
-		System.out.println(String.format("鍗佸叚杩涘埗锛?%x", 100));
-		System.out.println(String.format("鍏繘鍒讹細%o", 100));
+		//String str;
+		System.out.println(String.format("转换为数字：%d", 100));
+		System.out.println(String.format("转换为16进制：%x", 100));
+		System.out.println(String.format("%o", 100));
 		
-		System.out.println(String.format("娴偣鏁帮細%f", 100.5321321));
-		System.out.println(String.format("娴偣鏁帮細%g", 100.5321321));
+		System.out.println(String.format("%f", 100.5321321));
+		System.out.println(String.format("%g", 100.5321321));
 		
-		System.out.println(String.format("鎸囨暟锛?%e", 100.5321321));
+		System.out.println(String.format("科学计数法：%e", 100.5321321));
 		
 		
 		Date date = new Date();
 		System.out.println(date);
-		System.out.println(String.format("鏃ユ湡锛?%tF", date));
-		System.out.println(String.format("鏃堕棿锛?%tT", date));
-		System.out.println(String.format("涓?骞寸殑绗細%tj澶?", date));
+		System.out.println(String.format("日期：%tF", date));
+		System.out.println(String.format("时间：%tT", date));
+		System.out.println(String.format("今年的第%tj天", date));
 		
-		System.out.println(String.format("1970-1-1 00:00:00 鍒扮幇鍦ㄦ墍缁忚繃鐨勭鏁帮細%ts", date));
+		System.out.println(String.format("1970-1-1 00:00:00 相差时间%ts", date));
 	}
 }
