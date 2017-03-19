@@ -1,5 +1,6 @@
 package demo.java.regex;
 
+import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -14,12 +15,12 @@ public class RegExDemo {
 		boolean result = regex.isStartWith(key , input);
 		System.out.println(key + " is start with " + input +": " + result);
 
-//		// °´Ö¸¶¨Ä£Ê½ÔÚ×Ö·û´®²éÕÒ
+//		// ï¿½ï¿½Ö¸ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //		String line = "This order was placed for QT3000! OK?";
 //		String pattern = "(.*)(\\d+)(.*)";
-//		// ´´½¨ Pattern ¶ÔÏó
+//		// ï¿½ï¿½ï¿½ï¿½ Pattern ï¿½ï¿½ï¿½ï¿½
 //		Pattern r = Pattern.compile(pattern);
-//		// ÏÖÔÚ´´½¨matcher ¶ÔÏó
+//		// ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½matcher ï¿½ï¿½ï¿½ï¿½
 //		Matcher m = r.matcher(line);
 //		if (m.find()) {
 //			System.out.println("Found value: " + m.group(0));
@@ -51,26 +52,26 @@ public class RegExDemo {
 
 
 	/**
-	 * Æ¥ÅäÌõ¼þ
-	 * ¢Ù1¸ö¼°ÒÔÉÏ×ÖÄ¸Êý×Ö . _¿ªÍ·
-	 * ¢Ú@
-	 * ¢Û1¸ö¼°ÒÔÉÏ×ÖÄ¸Êý×Ö _
-	 * ¢ÜÒÔ.com½áÎ²
+	 * Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ . _ï¿½ï¿½Í·
+	 * ï¿½ï¿½@
+	 * ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ _
+	 * ï¿½ï¿½ï¿½ï¿½.comï¿½ï¿½Î²
 	 * @param input
 	 * @return
 	 */
 	public boolean isEmail(String input) {
-		String regex = "^[\\w.]{1,}@[a-zA-Z0-9_]{1,}.com$"; //  \\w Óë [a-zA-Z0-9_]µÈÐ§
+		String regex = "^[\\w.]{1,}@[a-zA-Z0-9_]{1,}.com$"; //  \\w ï¿½ï¿½ [a-zA-Z0-9_]ï¿½ï¿½Ð§
 		boolean isEmail = isMatch(input, regex);
 		return isEmail;
 	}
 	
 	/**
-	 * Æ¥ÅäÌõ¼þ£º
-	 * ¢Ù11Î»Êý×Ö
-	 * ¢ÚµÚÒ»Î»Êý×ÖÎª1
-	 * ¢ÛµÚ¶þÎ»Êý×ÖÎª3/5/7/8
-	 * @param input ÑéÖ¤µÄ×Ö·û´®
+	 * Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ï¿½ï¿½11Î»ï¿½ï¿½ï¿½ï¿½
+	 * ï¿½Úµï¿½Ò»Î»ï¿½ï¿½ï¿½ï¿½Îª1
+	 * ï¿½ÛµÚ¶ï¿½Î»ï¿½ï¿½ï¿½ï¿½Îª3/5/7/8
+	 * @param input ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
 	 * @return
 	 */
 	public boolean isMobilePhoneNumber(String input) {
